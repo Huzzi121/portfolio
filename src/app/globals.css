@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-secondary: var(--secondary);
+  --color-foreground: var(--fg);
+  --color-muted: var(--muted);
+  --color-emerald: var(--accent); /* Note: class name remains emerald but color adapts */
+  --color-border-subtle: var(--border-subtle);
+  --color-nav-bg: var(--nav-bg);
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --bg: #F7F5EE;
+  --secondary: #EBE5D9;
+  --fg: #2D2926;
+  --muted: #736B62;
+  --accent: #C25E24; /* Retro rust/burnt orange */
+  --border-subtle: #D6CCC2;
+  --nav-bg: rgba(247, 245, 238, 0.85); /* Slightly more opaque paper tint */
+  --grid-line: #B5A99B; /* Darker beige for visible background lines in light mode */
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #1E1B18;
+  --secondary: #2D2926;
+  --fg: #E8E2D2;
+  --muted: #A39B8F;
+  --accent: #E58D2C; /* Warm retro orange/amber */
+  --border-subtle: #4A443B;
+  --nav-bg: rgba(30, 27, 24, 0.8);
+  --grid-line: var(--border-subtle); /* Keep as is for dark mode */
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Global smooth transitions for theme switching */
+.bg-secondary, .bg-background, .border-border-subtle, .text-muted, .text-foreground, header, footer, section {
+  transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Custom utility for text-balance if needed */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Background Patterns */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+                    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+  mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
