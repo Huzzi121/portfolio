@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, Variants } from "framer-motion";
 import { ReactNode } from "react";
 
 interface ScrollRevealProps {
@@ -35,7 +35,7 @@ interface GroupProps {
 }
 
 export function ScrollRevealGroup({ children, className = "", staggerDelay = 0.15 }: GroupProps) {
-  const variants = {
+  const variants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -66,7 +66,7 @@ interface ItemProps {
 export function ScrollRevealItem({ children, className = "" }: ItemProps) {
   const shouldReduceMotion = useReducedMotion();
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: shouldReduceMotion ? { opacity: 0 } : { opacity: 0, y: 35 },
     show: shouldReduceMotion 
       ? { opacity: 1, transition: { duration: 0.8 } } 
