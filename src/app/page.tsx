@@ -87,10 +87,11 @@ export default function Home() {
               </Link>
               <a 
                 href="/resume.pdf"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-3 bg-transparent border border-border-subtle text-foreground font-medium rounded hover:border-emerald hover:text-emerald transition-colors"
               >
-                Download CV
+                View CV
               </a>
               <Link 
                 href="/contact"

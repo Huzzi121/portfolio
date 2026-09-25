@@ -23,7 +23,7 @@ export const projects: Project[] = [
     imageDark: "/images/projects/harmfilter-dark.png",
     imageLight: "/images/projects/harmfilter-light.png",
     status: "Completed",
-    githubUrl: "https://github.com/placeholder/harmfilter"
+    githubUrl: "https://github.com/Huzzi121/harmfilter"
   },
   {
     slug: "smart-dressing",
@@ -35,7 +35,7 @@ export const projects: Project[] = [
     imageDark: "/images/projects/smart-dressing-dark.png",
     imageLight: "/images/projects/smart-dressing-light.png",
     status: "Completed",
-    githubUrl: "https://github.com/placeholder/smart-dressing"
+    githubUrl: "https://github.com/Huzzi121/smart-dressing"
   },
   {
     slug: "roman-builders",

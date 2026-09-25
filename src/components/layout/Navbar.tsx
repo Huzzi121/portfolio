@@ -55,10 +55,11 @@ export function Navbar() {
           </ul>
           <a 
             href="/resume.pdf" 
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2 text-sm font-medium bg-secondary text-foreground border border-border-subtle rounded hover:border-emerald hover:text-emerald transition-colors"
           >
-            Download CV
+            View CV
           </a>
           {mounted && (
             <button
@@ -122,10 +123,11 @@ export function Navbar() {
               <li className="pt-4 border-t border-border-subtle">
                 <a 
                   href="/resume.pdf" 
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="block text-center w-full px-5 py-3 text-sm font-medium bg-emerald text-background rounded hover:bg-emerald/90 transition-colors"
                 >
-                  Download CV
+                  View CV
                 </a>
               </li>
             </ul>

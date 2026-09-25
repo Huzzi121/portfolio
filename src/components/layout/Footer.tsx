@@ -1,3 +1,5 @@
+import { socials } from "@/data/socials";
+
 export function Footer() {
   return (
     <footer className="mt-auto py-8 border-t border-border-subtle">
@@ -6,10 +8,10 @@ export function Footer() {
           © {new Date().getFullYear()} Huzaifa Ahmed. All rights reserved.
         </p>
         <div className="flex gap-4">
-          <a href="https://github.com/placeholder" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-muted hover:text-emerald transition-colors">
+          <a href={socials.github} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-muted hover:text-emerald transition-colors">
             GitHub
           </a>
-          <a href="https://linkedin.com/in/placeholder" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-muted hover:text-emerald transition-colors">
+          <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-muted hover:text-emerald transition-colors">
             LinkedIn
           </a>
         </div>
